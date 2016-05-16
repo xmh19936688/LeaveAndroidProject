@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/user_faceback_drawable"
+        android:drawable="@mipmap/faceback"/>
+    <item
+        android:id="@+id/user_face_drawable"
+        android:drawable="@mipmap/h001"
+        android:bottom="35.0dip"
+        android:left="5.0dip"
+        android:right="33.0dip"
+        android:top="10.0dip"/>
+
+</layer-list>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+    <!-- 右侧状态栏 -->
+
+    <LinearLayout
+        android:id="@+id/ll_state"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip" 
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- 审批状态 -->
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:gravity="center"
+            android:text="未审批"
+            android:textColor="#000" />
+        
+    </LinearLayout>
+
+    <!-- 用户ID(不显示，用于存放数据) -->
+
+    <TextView
+        android:id="@+id/tv_userid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    <!-- 班级 -->
+
+    <TextView
+        android:id="@+id/tv_classid"
+        android:layout_width="70dip"
+        android:layout_height="20dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dip"
+        android:gravity="center"
+        android:text="A1111"
+        android:textColor="#000" />
+
+    <!-- 姓名 -->
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="70dip"
+        android:layout_height="20dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_classid"
+        android:layout_marginRight="10dip"
+        android:gravity="center"
+        android:text="许孟豪"
+        android:textColor="#000" />
+
+    <!-- 起始日期 -->
+
+    <TextView
+        android:id="@+id/tv_startdate"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:layout_marginRight="10dip"
+        android:layout_toRightOf="@id/tv_classid"
+        android:gravity="center"
+        android:text="2014-08-16"
+        android:textColor="#000" />
+
+    <!-- 结束日期 -->
+
+    <TextView
+        android:id="@+id/tv_enddate"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:layout_alignLeft="@id/tv_startdate"
+        android:layout_below="@id/tv_startdate"
+        android:layout_toRightOf="@id/tv_username"
+        android:gravity="center"
+        android:text="2014-08-17"
+        android:textColor="#000" />
+
+    <!-- 请假原因 -->
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_enddate"
+        android:layout_alignTop="@id/tv_startdate"
+        android:layout_toLeftOf="@id/ll_state"
+        android:layout_toRightOf="@id/tv_startdate"
+        android:text="电话计费管理的环境啊哈飞机的尽快发大水拉哈斯就黄金大厦就浪费等哈数据很费劲的收纳农村睡了哈FDA发的卡斯加黄金的收纳就打算"
+        android:textColor="#000" />
+</RelativeLayout>
+<LinearLayout
+    android:id="@+id/ll_reply"
+    android:layout_width="fill_parent"
+    android:layout_height="40dip"
+    android:background="#88323232"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:visibility="gone">
+    
+    <!-- 批准按钮 -->
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:layout_width="80dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/button_login"
+            android:gravity="center"
+            android:text="@string/ask_agree"
+            android:textColor="#0099cc" />
+        <!-- 驳回按钮 -->
+
+        <Button
+            android:id="@+id/btn_disagree"
+            android:layout_width="80dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/button_login"
+            android:gravity="center"
+            android:text="@string/ask_disagree"
+            android:textColor="#0099cc" />
+</LinearLayout>
+</RelativeLayout>

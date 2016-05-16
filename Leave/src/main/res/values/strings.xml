@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="ask_agree"> 批准 </string>
+    <string name="ask_disagree"> 驳回 </string>
+    <string name="ask_undo">未审批</string>
+    <string name="ask_done">已审批</string>
+
+    <string name="app_name">LeaveNew</string>
+    <string name="strInputAccHint">输入帐号</string>
+    <string name="strAccInputLabel">帐号</string>
+    <string name="strPswInputLabel">密码</string>
+    <string name="option_remember">记住密码</string>
+    <string name="login">登 录</string>
+    
+    <string name="bottomtitle01">消息</string>
+    <string name="bottomtitle02">群组</string>
+    <string name="bottomtitle03">茶友圈</string>
+    <string name="bottomtitle04">联系人</string>
+    <string name="bottomtitle05">我</string>
+
+</resources>

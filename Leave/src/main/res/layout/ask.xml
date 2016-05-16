@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 用户ID(不显示，用于存放数据) -->
+
+    <TextView
+        android:id="@+id/tv_userid_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title_ask"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/s_search_bg" >
+
+        <!-- 标题栏中的标题 -->
+
+        <TextView
+            android:id="@+id/tv_title_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="请假"
+            android:textColor="@color/black_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_listinfo_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:textSize="16sp"
+            android:textColor="#0099cc"
+            android:text="请假记录>" />
+    </RelativeLayout>
+
+    <!-- 状态栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_state_ask"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/btn_submit_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_login"
+            android:text="提交"
+            android:textColor="#202020"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_above="@id/rl_state_ask"
+        android:background="@mipmap/line_dark" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/rl_title_ask"
+        android:background="@mipmap/line_dark" />
+
+    <LinearLayout
+        android:id="@+id/ll_askinfo_ask"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_state_ask"
+        android:layout_below="@id/rl_title_ask"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@mipmap/line" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!-- 姓名信息 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="姓名"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_username_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="许孟豪"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+
+                <!-- 起始日期 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="起始"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_startdate_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_login"
+                        android:editable="false"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+
+                <!-- 结束日期 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="终止"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_enddate_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_login"
+                        android:editable="false"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="原因"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_reason_ask"
+                        android:layout_width="200dip"
+                        android:layout_height="120dip"
+                        android:gravity="top"
+                        android:background="@drawable/edit_login"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@mipmap/line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_date_ask"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_title_ask"
+        android:background="#88323232"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <DatePicker
+            android:id="@+id/datePicker_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <Button
+            android:id="@+id/btn_date_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datePicker_ask"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dip"
+            android:text="确定"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

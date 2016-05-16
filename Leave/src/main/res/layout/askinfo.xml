@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 用户ID(不显示，用于存放数据) -->
+
+    <TextView
+        android:id="@+id/tv_userid_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/s_search_bg" >
+
+        <!-- 标题栏中的标题 -->
+
+        <TextView
+            android:id="@+id/tv_title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="详细信息"
+            android:textColor="@color/black_color"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 状态栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_state_info"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/tv_state_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#202020"
+            android:textSize="18sp" 
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/btn_agree_info"
+            android:layout_width="80dip"
+            android:layout_height="30dip"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dip"
+            android:background="@drawable/button_login"
+            android:text="@string/ask_agree"
+            android:textSize="18sp"
+            android:textColor="#0099cc" />
+        
+        <Button
+            android:id="@+id/btn_disagree_info"
+            android:layout_width="80dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dip"
+            android:layout_marginLeft="20dip"
+            android:background="@drawable/button_login"
+            android:gravity="center"
+            android:text="@string/ask_disagree"
+            android:textSize="18sp"
+            android:textColor="#0099cc" />
+    </RelativeLayout>
+    <View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dip"
+	        android:layout_above="@id/rl_state_info"
+	        android:background="@mipmap/line_dark" />
+    <View
+	        android:layout_width="fill_parent"
+	        android:layout_height="1dip"
+	        android:layout_below="@id/rl_title_info"
+	        android:background="@mipmap/line_dark" />
+<!-- 主信息列表 -->
+    <LinearLayout
+        android:id="@+id/ll_askinfo_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl_state_info"
+        android:layout_below="@id/rl_title_info"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@mipmap/line" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!-- 班级信息 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="班级"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_classid_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A1111"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+                <!-- 姓名信息 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="姓名"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_username_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="许孟豪"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="起始"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_startdate_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2014-08-20"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginRight="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="终止"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_enddate_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2014-08-21"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="90dip"
+                    android:background="@mipmap/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="50dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:text="原因"
+                        android:textColor="#606060"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_reason_info"
+                        android:layout_width="190dip"
+                        android:layout_height="wrap_content"
+                        android:text="一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十"
+                        android:textColor="#202020"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@mipmap/line" />
+    </LinearLayout>
+
+</RelativeLayout>
